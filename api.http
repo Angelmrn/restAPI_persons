@@ -1,0 +1,26 @@
+###GET users 
+GET http://localhost:1234/users
+
+###GET users by ID
+GET http://localhost:1234/users/3
+
+###POST create new user
+POST http://localhost:1234/users
+Content-Type: application/json
+
+{
+  "username": "Pepe Doe",
+  "email": "pepe.doe@example.com"
+}
+
+###PUT update user by ID
+PUT http://localhost:1234/users/3
+Content-Type: application/json
+
+{
+  "username": "Jose",
+  "email": "Jose@example.com"   
+}   
+
+###DELETE user by ID
+DELETE http://localhost:1234/users/1
