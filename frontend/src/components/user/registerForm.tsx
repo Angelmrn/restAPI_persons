@@ -1,7 +1,6 @@
 "use client";
 import { Box, TextField, Typography, Button } from "@mui/material";
 import { useActionState } from "react";
-import type { CreateUserDTO } from "../../types/user";
 import { register } from "../../actions/auth";
 
 export default function RegisterForm() {
@@ -30,7 +29,7 @@ export default function RegisterForm() {
         <TextField
           fullWidth
           type="text"
-          name="name"
+          name="username"
           label="Nombre(s)"
           margin="normal"
           variant="outlined"
