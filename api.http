@@ -1,26 +1,26 @@
 ###GET users 
-GET http://localhost:1234/users
+GET http://localhost:1234/api/users
 
 ###GET users by ID
-GET http://localhost:1234/users/3
+GET http://localhost:1234/api/users/4
 
 ###POST create new user
-POST http://localhost:1234/users
+POST http://localhost:1234/api/users
 Content-Type: application/json
 
 {
-  "username": "Pepe Doe",
-  "email": "pepe.doe@example.com"
+  "username": "Doe",
+  "email": "doe@example.com"
 }
 
 ###PUT update user by ID
-PUT http://localhost:1234/users/3
+PUT http://localhost:1234/api/users/10
 Content-Type: application/json
 
 {
-  "username": "Jose",
-  "email": "Jose@example.com"   
+  "username": "Tito",
+  "email": "titin@example.com"   
 }   
 
 ###DELETE user by ID
-DELETE http://localhost:1234/users/1
+DELETE http://localhost:1234/api/users/10
