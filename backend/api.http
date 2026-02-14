@@ -2,7 +2,7 @@
 GET http://localhost:1234/api/users
 
 ###GET users by ID
-GET http://localhost:1234/api/users/4
+GET http://localhost:1234/api/users/3
 
 ###POST create new user
 POST http://localhost:1234/api/users
