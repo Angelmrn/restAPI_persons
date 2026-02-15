@@ -20,3 +20,49 @@ export const fetchUserById = async (id: Number): Promise<User> => {
   }
   return response.json();
 };
+
+export const registerUser = async (
+  username: string,
+  email: string,
+): Promise<User> => {
+  const response = await fetch(`${API_URL}/users/register`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ username, email }),
+  });
+  if (!response.ok) {
+    const errData = await response.json().catch(() => null);
+    throw new Error(errData?.detail || "Failed to register user");
+  }
+  return response.json();
+};
+
+export const updateUser = async (
+  id: number,
+  userData: Partial<User>,
+): Promise<User> => {
+  const response = await fetch(`${API_URL}/users/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(userData),
+  });
+  if (!response.ok) {
+    const errData = await response.json().catch(() => null);
+    throw new Error(errData?.detail || "Failed to update user");
+  }
+  return response.json();
+};
+
+export const deleteUser = async (id: number): Promise<void> => {
+  const response = await fetch(`${API_URL}/users/${id}`, {
+    method: "DELETE",
+  });
+  if (!response.ok) {
+    const errData = await response.json().catch(() => null);
+    throw new Error(errData?.detail || "Failed to delete user");
+  }
+};

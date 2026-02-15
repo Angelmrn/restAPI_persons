@@ -1,25 +1,21 @@
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-  Box,
-  IconButton,
-} from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Home, People, PersonAdd } from "@mui/icons-material";
+import { PersonAdd } from "@mui/icons-material";
+import "../../globals.css";
 
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Función para verificar si la ruta está activa
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <AppBar position="sticky" elevation={2}>
+    <AppBar
+      position="sticky"
+      elevation={2}
+      sx={{ backgroundColor: "var(--bg-primary)" }}
+    >
       <Toolbar>
-        {/* Logo / Título */}
         <Typography
           variant="h6"
           component="div"
@@ -33,51 +29,24 @@ export default function Navbar() {
           }}
           onClick={() => navigate("/")}
         >
-          🧑‍💻 UserApp
+          Person API
         </Typography>
 
-        {/* Botones de navegación */}
         <Box sx={{ display: "flex", gap: 1 }}>
-          <Button
-            color="inherit"
-            startIcon={<Home />}
-            onClick={() => navigate("/")}
-            sx={{
-              fontWeight: isActive("/") ? 700 : 400,
-              borderBottom: isActive("/") ? "3px solid white" : "none",
-              borderRadius: 0,
-              pb: isActive("/") ? 0.5 : 0,
-            }}
-          >
-            Inicio
-          </Button>
-
-          <Button
-            color="inherit"
-            startIcon={<People />}
-            onClick={() => navigate("/users")}
-            sx={{
-              fontWeight: isActive("/users") ? 700 : 400,
-              borderBottom: isActive("/users") ? "3px solid white" : "none",
-              borderRadius: 0,
-              pb: isActive("/users") ? 0.5 : 0,
-            }}
-          >
-            Usuarios
-          </Button>
-
           <Button
             color="inherit"
             startIcon={<PersonAdd />}
             onClick={() => navigate("/register")}
             sx={{
               fontWeight: isActive("/register") ? 700 : 400,
-              borderBottom: isActive("/register") ? "3px solid white" : "none",
+              borderBottom: isActive("/register")
+                ? "3px solid var(--text-primary)"
+                : "none",
               borderRadius: 0,
               pb: isActive("/register") ? 0.5 : 0,
             }}
           >
-            Registrar
+            Add Person
           </Button>
         </Box>
       </Toolbar>

@@ -1,10 +1,11 @@
 "use client";
 import { Box, TextField, Typography, Button } from "@mui/material";
 import { useActionState } from "react";
-import { register } from "../../actions/auth";
-
+import { register } from "../../actions/user";
+import { useNavigate } from "react-router-dom";
 export default function RegisterForm() {
   const [state, formAction, pending] = useActionState(register, undefined);
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -77,7 +78,15 @@ export default function RegisterForm() {
           }}
           disabled={pending}
         >
-          Registrarse
+          {pending ? "Registering..." : "Register"}
+        </Button>
+        <Button
+          fullWidth
+          variant="text"
+          sx={{ mt: 2, color: "primary.main", fontWeight: 600 }}
+          onClick={() => navigate("/")}
+        >
+          Go Back
         </Button>
       </form>
     </Box>

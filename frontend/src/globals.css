@@ -1,7 +1,14 @@
+:root {
+  --bg-primary: #000000;
+  --bg-secondary: #9c1919;
+  --bg-card: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+}
 body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: black;
-  color: white;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
