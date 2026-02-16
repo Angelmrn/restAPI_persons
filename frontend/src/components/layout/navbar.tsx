@@ -29,7 +29,7 @@ export default function Navbar() {
           }}
           onClick={() => navigate("/")}
         >
-          Person API
+          User API
         </Typography>
 
         <Box sx={{ display: "flex", gap: 1 }}>
@@ -46,7 +46,7 @@ export default function Navbar() {
               pb: isActive("/register") ? 0.5 : 0,
             }}
           >
-            Add Person
+            Add User
           </Button>
         </Box>
       </Toolbar>

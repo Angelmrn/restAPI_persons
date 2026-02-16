@@ -3,6 +3,7 @@ import HomePage from "./pages/home/HomePage";
 import RegisterPage from "./pages/register/RegisterPage";
 import UserInfo from "./pages/User/userInfo";
 import Layout from "./components/layout/layout";
+import NotFoundPage from "./components/notFound/NotFoundPage";
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
           <Route path="/user/:id" element={<UserInfo />} />
         </Route>
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="*" element={<div>404 Not Found</div>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

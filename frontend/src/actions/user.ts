@@ -60,6 +60,9 @@ export async function register(
         username: rawFormData.username,
         email: rawFormData.email,
       },
+      errors: {
+        email: ["Email already registered."],
+      },
     };
   }
 }

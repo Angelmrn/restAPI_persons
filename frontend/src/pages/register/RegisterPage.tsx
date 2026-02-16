@@ -8,14 +8,14 @@ export default function App() {
         minHeight: "100vh",
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "white",
+        backgroundColor: "var(--bg-secondary)",
       }}
     >
       <Box
         sx={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "primary.main",
+          backgroundColor: "var(--bg-primary)",
           clipPath: "polygon(0 0, 100% 0, 100% 35%, 0 60%)",
           zIndex: 0,
         }}

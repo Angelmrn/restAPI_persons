@@ -17,10 +17,9 @@ export default function Layout() {
         component="main"
         sx={{
           flexGrow: 1,
-          backgroundColor: "#f5f5f5",
         }}
       >
-        <Outlet /> {/* Aquí se renderizan las páginas hijas */}
+        <Outlet />
       </Box>
     </Box>
   );

@@ -99,7 +99,15 @@ export default function UserInfo() {
     );
   }
   return (
-    <Box sx={{ width: "100%", maxWidth: 700, mx: "auto", my: 6, px: 2 }}>
+    <Box
+      sx={{
+        width: "100%",
+        maxWidth: 700,
+        mx: "auto",
+        my: 6,
+        px: 2,
+      }}
+    >
       <Card elevation={3}>
         <CardContent sx={{ p: 4 }}>
           <Stack
@@ -108,10 +116,11 @@ export default function UserInfo() {
             alignItems="center"
             sx={{ mb: 3 }}
           >
-            <Typography variant="h5" sx={{ fontWeight: 600, color: "black" }}>
-              {isEditing
-                ? "Editando usuario"
-                : `Información de ${user.username}`}
+            <Typography
+              variant="h5"
+              sx={{ fontWeight: 600, color: "text.primary" }}
+            >
+              {isEditing ? "Editando usuario" : `${user.username} information`}
             </Typography>
           </Stack>
 
@@ -165,7 +174,7 @@ export default function UserInfo() {
                 <Button variant="outlined" onClick={() => navigate("/")}>
                   Back to Home
                 </Button>
-                <Button variant="contained" onClick={() => setIsEditing(true)}>
+                <Button variant="outlined" onClick={() => setIsEditing(true)}>
                   Edit User
                 </Button>
                 <Button
