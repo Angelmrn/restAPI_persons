@@ -57,64 +57,80 @@ Sistema fullstack para gestionar usuarios con operaciones CRUD completas. Backen
 
 ## 📁 Estructura del Proyecto
 
+```
 restAPI_persons/
 ├── docs/
-│ └── screenshots/
-│ ├── home.png
-│ ├── register.png
-│ └── user-detail.png
+│   └── screenshots/
+│       ├── home.png
+│       ├── register.png
+│       └── user-detail.png
+│
 ├── backend/
-│ ├── prisma/
-│ │ └── schema.prisma
-│ ├── src/
-│ │ ├── controllers/
-│ │ │ └── users.controllers.js
-│ │ ├── routes/
-│ │ │ └── users.routes.js
-│ │ ├── schemas/
-│ │ │ └── user.schema.js
-│ │ ├── prisma.js
-│ │ ├── db.js
-│ │ └── index.js
-│ ├── prisma.config.ts
-│ ├── .env.example  
-│ ├── .gitignore
-│ └── package.json
-├── frontend/
-│ ├── src/
-│ │ ├── pages/
-│ │ │ ├── home/
-│ │ │ │ └── HomePage.tsx
-│ │ │ ├── register/
-│ │ │ │ └── RegisterPage.tsx
-│ │ │ └── User/
-│ │ │ └── userInfo.tsx
-│ │ ├── components/
-│ │ │ ├── layout/
-│ │ │ │ ├── layout.tsx
-│ │ │ │ └── navbar.tsx
-│ │ │ ├── user/
-│ │ │ │ └── usersTable.tsx
-│ │ │ └── register/
-│ │ │ └── registerForm.tsx
-│ │ ├── api/
-│ │ │ └── users.ts
-│ │ ├── actions/
-│ │ │ └── user.ts
-│ │ ├── types/
-│ │ │ └── user.ts
-│ │ ├── utils/
-│ │ │ └── formats.ts
-│ │ ├── App.tsx
-│ │ ├── main.tsx
-│ │ └── globals.css
-│ ├── public/
-│ ├── .env.example  
-│ ├── .gitignore
-│ ├── index.html
-│ ├── vite.config.ts
-│ └── package.json
-└── README.md
+│   ├── prisma/
+│   │   └── schema.prisma
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   └── users.controllers.js
+│   │   ├── routes/
+│   │   │   └── users.routes.js
+│   │   ├── schemas/
+│   │   │   └── user.schema.js
+│   │   ├── prisma.js
+│   │   ├── db.js
+│   │   └── index.js
+│   ├── prisma.config.ts
+│   ├── .env
+│   ├── .env.example
+│   ├── .gitignore
+│   └── package.json
+│
+└── frontend/
+    ├── src/
+    │   ├── pages/
+    │   │   ├── home/
+    │   │   │   └── HomePage.tsx
+    │   │   ├── register/
+    │   │   │   └── RegisterPage.tsx
+    │   │   └── User/
+    │   │       └── userInfo.tsx
+    │   ├── components/
+    │   │   ├── layout/
+    │   │   │   ├── layout.tsx
+    │   │   │   └── navbar.tsx
+    │   │   ├── user/
+    │   │   │   └── usersTable.tsx
+    │   │   └── register/
+    │   │       └── registerForm.tsx
+    │   ├── api/
+    │   │   └── users.ts
+    │   ├── actions/
+    │   │   └── user.ts
+    │   ├── types/
+    │   │   └── user.ts
+    │   ├── utils/
+    │   │   └── formats.ts
+    │   ├── App.tsx
+    │   ├── main.tsx
+    │   └── globals.css
+    ├── public/
+    ├── .env
+    ├── .env.example
+    ├── .gitignore
+    ├── vite.config.ts
+    └── package.json
+```
+
+## 🔌 API Endpoints
+
+**Base URL**: `http://localhost:1234/api`
+
+| Método | Endpoint          | Descripción                |
+| ------ | ----------------- | -------------------------- |
+| GET    | `/users`          | Obtener todos los usuarios |
+| GET    | `/users/:id`      | Obtener usuario por ID     |
+| POST   | `/users/register` | Crear nuevo usuario        |
+| PUT    | `/users/:id`      | Actualizar usuario         |
+| DELETE | `/users/:id`      | Eliminar usuario           |
 
 ## ⚙️ Instalación y Configuración
 

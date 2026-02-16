@@ -4,16 +4,16 @@
   --bg-card: #111827;
   --bg-card-hover: #162033;
   --border: #1e2d45;
-  --border-light: #243554; /* Bordes visibles */
+  --border-light: #243554;
 
-  --accent: #2563eb; /* Azul eléctrico */
-  --accent-bright: #3b82f6; /* Azul brillante */
-  --accent-glow: #60a5fa; /* Glow y links */
-  --accent-muted: #1d3557; /* Fondos azul suave */
+  --accent: #2563eb;
+  --accent-bright: #3b82f6;
+  --accent-glow: #60a5fa;
+  --accent-muted: #1d3557;
 
-  --text-primary: #f0f6ff; /* Blanco frío */
-  --text-secondary: #94a3b8; /* Gris azulado */
-  --text-muted: #475569; /* Texto desactivado */
+  --text-primary: #f0f6ff;
+  --text-secondary: #94a3b8;
+  --text-muted: #475569;
 
   --success: #10b981;
   --error: #ef4444;
